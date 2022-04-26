@@ -9,6 +9,7 @@ import { PersonComponent } from './controller/person/person.component';
 import { AnswerComponent } from './controller/answer/answer.component';
 import { QuestionComponent } from './controller/question/question.component';
 import { SubjectComponent } from './controller/subject/subject.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { SubjectComponent } from './controller/subject/subject.component';
     PersonComponent,
     AnswerComponent,
     QuestionComponent,
-    SubjectComponent
+    SubjectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ...material_import,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

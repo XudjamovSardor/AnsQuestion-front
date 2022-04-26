@@ -4,7 +4,7 @@
       class="example-toolbar">
       <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     
-      <span>Shifo.uz</span>
+      <span>AnsQuestion.net <mat-icon>answer</mat-icon></span>
       <span class="spacer"></span>
     
       <button  [matMenuTriggerFor]="menuRef" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
@@ -31,15 +31,15 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
         <mat-nav-list dense>
-            <a mat-list-item routerLink="/">Dashboard</a>
+            <a id="font" mat-list-item routerLink="/">Dashboard</a>
             <mat-divider></mat-divider>
-            <a mat-list-item routerLink="/user">User</a>
+            <a id="font" mat-list-item routerLink="/user">User</a>
             <mat-divider></mat-divider>
-            <a mat-list-item routerLink="/answer">Answer</a>
+            <a id="font" mat-list-item routerLink="/answer">Answer</a>
             <mat-divider></mat-divider>
-            <a mat-list-item routerLink="/question">Question</a>
+            <a id="font" mat-list-item routerLink="/question">Question</a>
             <mat-divider></mat-divider>
-            <a mat-list-item routerLink="/subject">Subject</a>
+            <a id="font" mat-list-item routerLink="/subject">Subject</a>
             <mat-divider></mat-divider>
             
         </mat-nav-list>
@@ -53,5 +53,5 @@
        
       </mat-sidenav-content>
     </mat-sidenav-container>
-    
+
     

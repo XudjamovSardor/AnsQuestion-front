@@ -6,6 +6,6 @@ export interface User {
     last_name: String,
     email: String,
     password: String,
-    registrDate: String,
+    registDate: String,
     role: Role
 }
