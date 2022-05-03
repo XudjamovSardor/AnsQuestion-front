@@ -10,6 +10,7 @@ import { AnswerComponent } from './controller/answer/answer.component';
 import { QuestionComponent } from './controller/question/question.component';
 import { SubjectComponent } from './controller/subject/subject.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ...material_import,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
