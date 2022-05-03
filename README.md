@@ -18,7 +18,18 @@ ng serve
 ng add @angular/material
 ```
 
-### Generaty Component
-```
-ng g c controller/COMPONENT_NAME
-```
+
+
+
+> # Generaty Component
+> > ### Component
+> > > ```ng g c component/component_name```
+> 
+> > ### Service
+> > > ```ng g s service/service_name```
+> 
+> > ### Interface
+> > > ```ng g i model/interface_name || model_name```
+> 
+> > ### Pipe
+> > > ```ng g pipe pipe/pipe_name```
