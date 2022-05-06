@@ -1,1 +1,90 @@
-<p>question works!</p>
+<mat-card-content>
+    <br><br>
+
+    <div>
+        <span class="number">Question: {{questionSon}}</span>
+
+        <button (click)="refresh()" style="float: right; margin: 0px;" mat-stroked-button color="primary">Refresh
+            <mat-icon>
+                refresh
+            </mat-icon>
+        </button>
+    </div>
+    <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Clearable input</mat-label>
+        <input #intput matInput type="text" (input)="loader(intput.value)">
+    </mat-form-field>
+
+    <div class="table-container">
+        <div style="display: flex; justify-content: center; align-items: center; margin: 10px;" *ngIf="isLoadingResult">
+            <div class="loadingio-spinner-spinner-hd046bupud"><div class="ldio-nlb8hdub5pc">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div></div>
+        </div>
+
+
+        <table *ngIf="!isLoadingResult" mat-table class="mat-elevation-z8" [dataSource]="questionlar" matSort
+            matSortDisableClear matSortDirection="asc">
+
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let que"> {{que.id}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="questionString">
+                <th mat-header-cell *matHeaderCellDef> Question String </th>
+                <td mat-cell *matCellDef="let que"> {{que.questionString}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="questionPhoto">
+                <th mat-header-cell *matHeaderCellDef> Question Photo</th>
+                <td mat-cell *matCellDef="let que">
+                     <button *ngIf="que.questionPhoto ? true : false" color="primary" mat-stroked-button (click)="openImg(que)"><img width="50" height="50" src="{{que.questionPhoto}}" alt="" srcset=""></button>
+                    <span *ngIf="que.questionPhoto ? false : true">None</span>
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="user">
+                <th mat-header-cell *matHeaderCellDef> User </th>
+                <td mat-cell *matCellDef="let que"><button (click)="userInfo(que.person)" mat-stroked-button color="primary">{{que.person.id}}</button></td>
+            </ng-container>
+
+            <ng-container matColumnDef="subject">
+                <th mat-header-cell *matHeaderCellDef> Subject</th>
+                <td mat-cell *matCellDef="let que"> <button mat-stroked-button color="primary" (click)="subjectInfo(que.subject)"> {{que.subject.id}} </button></td>
+            </ng-container>
+
+            <ng-container matColumnDef="class">
+                <th mat-header-cell *matHeaderCellDef> Class</th>
+                <td mat-cell *matCellDef="let que"> {{que.aClass}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="questionDate">
+                <th mat-header-cell *matHeaderCellDef> Question Data</th>
+                <td mat-cell *matCellDef="let que"> {{que.questionDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="questionLvl">
+                <th mat-header-cell *matHeaderCellDef> Question Lvl</th>
+                <td mat-cell *matCellDef="let que"> {{que.questionLevl}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="tasks">
+                <th mat-header-cell *matHeaderCellDef> Tasks </th>
+                <td mat-cell *matCellDef="let sub">
+                    <div style="margin-left: 3px" class="example-button-container">
+                        <button (click)="deletById(sub.id)" mat-mini-fab color="warn">
+                            <mat-icon color="black">delete</mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <br><br><br><br>
+</mat-card-content>

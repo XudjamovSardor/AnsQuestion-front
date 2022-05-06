@@ -11,6 +11,7 @@ import { QuestionComponent } from './controller/question/question.component';
 import { SubjectComponent } from './controller/subject/subject.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ImgDialogComponent, SubjectDialogComponent, UserInfoDialogComponent } from './shared/info-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     AnswerComponent,
     QuestionComponent,
     SubjectComponent,
+
+    // Dialog Components Class
+    UserInfoDialogComponent,
+    ImgDialogComponent,
+    SubjectDialogComponent
   ],
   imports: [
     BrowserModule,
