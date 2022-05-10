@@ -11,7 +11,7 @@ export interface TableModel {
 @Component({
   selector: 'app-person',
   templateUrl: './person.component.html',
-  styleUrls: ['./person.component.scss']
+  styleUrls: ['./person.component.scss', "../../../assets/spriler.style.scss"]
 })
 
 
