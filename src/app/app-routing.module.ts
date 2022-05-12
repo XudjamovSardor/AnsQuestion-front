@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnswerComponent } from './controller/answer/answer.component';
+import { DashboardComponent } from './controller/dashboard/dashboard.component';
 import { PersonComponent } from './controller/person/person.component';
 import { QuestionComponent } from './controller/question/question.component';
 import { SubjectComponent } from './controller/subject/subject.component';
 
-const routes: Routes = [
+const routes: Routes = [  
   {
     path: "user",
     component: PersonComponent
@@ -21,6 +22,13 @@ const routes: Routes = [
    {
      path: "subject",
      component: SubjectComponent
+   },
+   {
+    path: '', pathMatch: 'full', redirectTo: '/dashboard'  
+   },
+   {
+     path: "dashboard",
+     component: DashboardComponent
    }
 ];
 

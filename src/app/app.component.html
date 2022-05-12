@@ -4,7 +4,7 @@
       class="example-toolbar">
       <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     
-      <span>AnsQuestion.net <mat-icon>answer</mat-icon></span>
+      <span>AnsQuestion.net <mat-icon>help</mat-icon></span>
       <span class="spacer"></span>
     
       <button  [matMenuTriggerFor]="menuRef" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
@@ -31,7 +31,7 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
         <mat-nav-list dense>
-            <a id="font" mat-list-item routerLink="/">Dashboard</a>
+            <a id="font" mat-list-item routerLink="/dashboard">Dashboard</a>
             <mat-divider></mat-divider>
             <a id="font" mat-list-item routerLink="/user">User</a>
             <mat-divider></mat-divider>

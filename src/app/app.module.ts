@@ -12,6 +12,7 @@ import { SubjectComponent } from './controller/subject/subject.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImgDialogComponent, QuestionDialogComponent, SubjectDialogComponent, UserInfoDialogComponent } from './shared/info-dialog.component';
+import { DashboardComponent } from './controller/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ImgDialogComponent, QuestionDialogComponent, SubjectDialogComponent, Us
     UserInfoDialogComponent,
     ImgDialogComponent,
     SubjectDialogComponent,
-    QuestionDialogComponent
+    QuestionDialogComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
