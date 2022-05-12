@@ -1,0 +1,47 @@
+mat-card {
+  width: 346px;
+
+  .info-conteiner {
+    display: flex;
+
+    font-size: 20px;
+
+    mat-icon {
+      font-size: 35px;
+      padding: 2px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.btn-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .btn-con {
+    display: block;
+  }
+}
+
+
+.table-container {
+  max-height: 65vh;
+  overflow: auto;
+  height: 90vh;
+  position: relative;
+
+  table {
+    margin: auto;
+      width: 90%;
+      max-height: 90vh;
+
+      overflow: auto;
+      border-collapse: collapse;
+      th,
+      td {
+          text-align: center;
+          border: solid 3px #eee;
+      }
+  }
+}
