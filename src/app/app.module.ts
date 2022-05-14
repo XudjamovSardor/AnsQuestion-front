@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ImgDialogComponent, QuestionDialogComponent, SubjectDialogComponent, UserInfoDialogComponent } from './shared/info-dialog.component';
 import { DashboardComponent } from './controller/dashboard/dashboard.component';
 import { ErorrInterceptor } from './core/error';
+import { Page404Component } from './controller/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { ErorrInterceptor } from './core/error';
     AnswerComponent,
     QuestionComponent,
     SubjectComponent,
+    Page404Component,
 
     // Dialog Components Class
     UserInfoDialogComponent,
     ImgDialogComponent,
     SubjectDialogComponent,
     QuestionDialogComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
