@@ -12,7 +12,7 @@ import { QuestionDialogComponent, UserInfoDialogComponent } from 'src/app/shared
   styleUrls: ['./answer.component.scss', "../../../assets/spriler.style.scss"]
 })
 export class AnswerComponent implements OnInit, AfterContentInit {
-  answers!: Answer[]
+  answers!: any[]
   answerNum!: number
   isLoding = false
   constructor(
@@ -32,8 +32,8 @@ export class AnswerComponent implements OnInit, AfterContentInit {
   loader() {
     this.isLoding = true
     this.answerService.getAll().subscribe(data => {
-      this.answerNum = data.length
-      this.answers = data
+      this.answerNum = data.totalElements
+      this.answers = data.content
       this.isLoding = false
       console.log(data);
 

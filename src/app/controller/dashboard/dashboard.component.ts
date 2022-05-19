@@ -1,5 +1,4 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { AfterContentInit, Component } from '@angular/core';
 import { User } from 'src/app/model/person';
 import { AnswerService } from 'src/app/service/answer.service';
 import { QuestionService } from 'src/app/service/question.service';
@@ -54,11 +53,11 @@ export class DashboardComponent implements AfterContentInit {
     })
 
     this.answerService.getAll().subscribe(data => {
-      this.answerNum = data.length
+      this.answerNum = data.totalElements
     })
 
     this.questionService.getAll(param).subscribe(data => {
-      this.questionNum = data.length
+      this.questionNum = data.totalElements
     })
 
     this.subjectService.getAll(param).subscribe(data => {

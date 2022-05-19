@@ -11,7 +11,7 @@ import { Subject } from 'src/app/model/subject';
   styleUrls: ['./question.component.scss', "../../../assets/spriler.style.scss"]
 })
 export class QuestionComponent implements OnInit, AfterContentInit {
-  questionlar!: Question[]
+  questionlar!: any[]
   questionSon!: number
   isLoadingResult: boolean = false
 
@@ -32,11 +32,9 @@ export class QuestionComponent implements OnInit, AfterContentInit {
       key: key
     }
     this.questionService.getAll(params).subscribe(data => {
-      this.questionlar = data
-      this.questionSon = data.length
-      this.isLoadingResult = false
-      console.log(data[0]);
-      
+      this.questionlar = data.content
+      this.questionSon = data.totalElements
+      this.isLoadingResult = false      
     })
   }
 

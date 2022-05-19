@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Answer } from '../model/answer';
+import { Page } from '../model/page';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class AnswerService {
     private http: HttpClient
   ) { }
 
-  getAll(): Observable<Answer[]> {
-    return this.http.get<Answer[]>(this.api)
+  getAll(): Observable<Page<Answer[]>> {
+    return this.http.get<Page<Answer[]>>(this.api)
   }
 
   create(ans: Answer): Observable<Answer> {
